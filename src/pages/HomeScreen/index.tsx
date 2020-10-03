@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Text, ScrollView, FlatList, View } from "react-native";
+import React, {useState, useEffect} from "react";
+import {Text, ScrollView, FlatList, View} from "react-native";
 
-import { Container, Header, Conteudos, ImagemFilmes, Textos } from "./styles";
-import api from "../services/api";
+import {Container, Header, Conteudos, ImagemFilmes, Textos} from "./styles";
+import api from "../../services/api";
 
 interface Red {
   imagem: string;
@@ -12,7 +12,7 @@ const HomeScreen: React.FC<Red> = () => {
   const [filmes, Setfilmes] = useState<any[]>([]);
 
   useEffect(() => {
-    api.get("/eventos").then((res) => {
+    api.get("eventos").then((res) => {
       Setfilmes(res.data);
     });
   }, []);
@@ -20,26 +20,27 @@ const HomeScreen: React.FC<Red> = () => {
   return (
     <ScrollView>
       <Header>
-        <Text>Lista de filmes</Text>
+        <Text>Api</Text>
       </Header>
-      <FlatList
+
+      {/*  <FlatList
         data={filmes}
         keyExtractor={(filmes) => filmes.id}
-        renderItem={({ item: filmes }) => (
+        renderItem={({item: filmes}) => (
           <Container>
             <Conteudos>
               <ImagemFilmes
                 source={{
                   uri: filmes.imagem,
                 }}
-              ></ImagemFilmes>
+              />
               <Textos>
                 <Text>Nome:{filmes.nome}</Text>
               </Textos>
             </Conteudos>
           </Container>
         )}
-      />
+      /> */}
     </ScrollView>
   );
 };
