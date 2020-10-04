@@ -1,10 +1,7 @@
 import * as React from "react";
-import {NavigationContainer} from "@react-navigation/native";
-import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import {createDrawerNavigator} from "@react-navigation/drawer";
-
-const Drawer = createDrawerNavigator();
 
 import HomeScreen from "./src/pages/HomeScreen";
 import Info from "./src/pages/Info";
@@ -17,12 +14,12 @@ export default function App() {
     <>
       <NavigationContainer>
         <Tab.Navigator
-          initialRouteName="Profile"
-          tabBarOptions={{activeTintColor: "blue"}}
+          initialRouteName="Home"
+          tabBarOptions={{ activeTintColor: "blue" }}
         >
           <Tab.Screen
             options={{
-              tabBarIcon: ({color, size}) => (
+              tabBarIcon: ({ color, size }) => (
                 <MaterialCommunityIcons name="home" color={color} size={size} />
               ),
             }}
@@ -31,7 +28,7 @@ export default function App() {
           />
           <Tab.Screen
             options={{
-              tabBarIcon: ({color, size}) => (
+              tabBarIcon: ({ color, size }) => (
                 <MaterialCommunityIcons
                   name="alpha-x-circle-outline"
                   color={color}
@@ -44,7 +41,7 @@ export default function App() {
           />
           <Tab.Screen
             options={{
-              tabBarIcon: ({color, size}) => (
+              tabBarIcon: ({ color, size }) => (
                 <MaterialCommunityIcons
                   name="account-circle-outline"
                   color={color}

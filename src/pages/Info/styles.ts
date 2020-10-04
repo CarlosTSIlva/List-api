@@ -21,3 +21,6 @@ font-size: 36px;
 display: flex;
 flex-wrap: wrap;
 `
+export const Butao = styled.View`
+margin-top: 10px;
+`

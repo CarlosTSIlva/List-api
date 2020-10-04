@@ -6,19 +6,16 @@ export const Container = styled.View`
   justify-content: center;
 `;
 
-export const Header = styled.View`
+export const Header = styled.Text`
   margin-top: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   font-size: 30px;
-  font-weight: 500;
 `;
 
 export const Conteudos = styled.View`
   align-items: center;
   justify-content: center;
-  background-color: #b3f5f4f6;
+  background-color: #d3d3d3;
   margin-top: 25px;
   margin-bottom: 10px;
   display: flex;

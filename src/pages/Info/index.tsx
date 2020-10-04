@@ -1,6 +1,6 @@
 import React from "react";
-import {Text} from "react-native";
-import {Container, Input, TextoPrincipal} from "./styles";
+import { Text, Button } from "react-native";
+import { Container, Input, Butao, TextoPrincipal } from "./styles";
 
 const Info: React.FC = () => {
   return (
@@ -9,6 +9,13 @@ const Info: React.FC = () => {
       <TextoPrincipal>ultimas mensagens</TextoPrincipal>
       <Text>Assine para ter as ultimas noticias sobre tecnologias.</Text>
       <Input placeholder="Email" />
+      <Butao>
+        <Button
+          title="Confirmar"
+          color="#000000"
+          onPress={() => alert("Informações salvas")}
+        />
+      </Butao>
     </Container>
   );
 };
